@@ -1,0 +1,1 @@
+This project is the final ruby project for The Odin Project. The goal is to recreate the classical game of chess using ruby.
