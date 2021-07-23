@@ -1,4 +1,4 @@
-This project is the final ruby project for The Odin Project. The goal is to recreate the classical game of chess using Ruby.
+This project is the final ruby project for The Odin Project. The goal is to recreate the classical game of chess using Ruby. This project will also implement the practices of Test Driven Development and git mechanics such as branching.
 
 Components
 
@@ -23,6 +23,8 @@ Rules
 
 ***En Passant - If an enemy pawn moves 2 tiles to be adjacent to the pawn, the pawn may move diagonally behind the enemy pawn to capture it
 
+***Promotion - If the pawn reaches the other side of the board, it may promote to a Bishop, Knight, Rook, or Queen
+
 **Rook - Move along a rank or file (no diagonal movement)
 
 **Bishop - Move along diagonals
@@ -40,12 +42,13 @@ Representation of the gameboard - An array of arrays representing the 8x8 grid. 
 
 *Methods
 
-*Display - Will pretty print the board to the console
+**Display - Will pretty print the board to the console
 
 **Move(Player, start, stop) - Will move a piece from one space to another, if allowed
 
 **Allowed? - Method to check if a piece is allowed to move to a certain space. Criteria include that the space isn't occupied by a friendly piece, the space is within the piece's allowed range of movement, and it has line of sight to the space unimpeded by any piece(this excludes the knight)
 
+**Winner? - Method to check if there is a winner(The king will be captured and cannot move to a safe space) or if there is a stalemate(The king is the only piece that can move, is not in danger, and cannot move to a safe tile)
 
 Representation of pieces
 
@@ -54,10 +57,23 @@ Representation of pieces
 **Instance variables
 
 ***UniRep - P/p
+***LegalMoves - Array of legal moves(Space differences from current position)
 
 *Rook
 
+**Instance variables
+
+***UniRep - R/r
+
+***LegalMoves - Array of legal moves(Space differences from current position)
+
 *Bishop
+
+**Instance variables
+
+***UniRep - B/b
+
+***LegalMoves - Array of legal moves(Space differences from current position)
 
 *Knight
 
@@ -65,6 +81,20 @@ Representation of pieces
 
 ***UniRep - N/n
 
+***LegalMoves - Array of legal moves(Space differences from current position)
+
 *Queen
 
+**Instance variables
+
+***UniRep - Q/q
+
+***LegalMoves - Array of legal moves(Space differences from current position)
+
 *King
+
+**Instance variables
+
+***UniRep - K/k
+
+***LegalMoves - Array of legal moves(Space differences from current position)
