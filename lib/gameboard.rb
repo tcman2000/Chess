@@ -4,3 +4,8 @@ class Gameboard
   def initialize
   end
 end
+
+class Player
+  def initialize
+  end
+end
