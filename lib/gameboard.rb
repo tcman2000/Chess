@@ -1,11 +1,33 @@
+require './pieces.rb'
+
 class Gameboard
   attr_accessor :grid
 
   def initialize
+    @grid = Array.new(8) { Array.new(8) {} }
   end
 end
 
 class Player
-  def initialize
+  attr_accessor :name, :wins
+
+  public
+
+  def initialize(name)
+    @name = name
+  end
+
+  def display
+  end
+
+  def Move(player, start, stop)
+  end
+
+  private
+
+  def Allowed?(piece)
+  end
+
+  def Winner?(player)
   end
 end
