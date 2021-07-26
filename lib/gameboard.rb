@@ -6,16 +6,6 @@ class Gameboard
   def initialize
     @grid = Array.new(8) { Array.new(8) {} }
   end
-end
-
-class Player
-  attr_accessor :name, :wins
-
-  public
-
-  def initialize(name)
-    @name = name
-  end
 
   def display
   end
@@ -29,5 +19,13 @@ class Player
   end
 
   def Winner?(player)
+  end
+end
+
+class Player
+  attr_accessor :name, :wins
+
+  def initialize(name)
+    @name = name
   end
 end
